@@ -1,0 +1,68 @@
+{
+  "name": "Slidev Presentation",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  "forwardPorts": [3030],
+  "portsAttributes": {
+    "3030": {
+      "label": "Slidev Dev Server",
+      "onAutoForward": "openBrowser",
+      "elevateIfNeeded": false,
+      "requireLocalPort": false
+    }
+  },
+
+  "postCreateCommand": "corepack enable && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm install",
+  "postStartCommand": "pnpm run dev -- --remote --port 3030",
+
+  "containerEnv": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "antfu.slidev",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[vue]": {
+          "editor.defaultFormatter": "Vue.volar"
+        },
+        "[markdown]": {
+          "editor.wordWrap": "on",
+          "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+          }
+        },
+        "files.associations": {
+          "*.md": "markdown"
+        },
+        "slidev.annotations": true
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "slides.md"
+      ]
+    }
+  },
+
+  "remoteUser": "node"
+}

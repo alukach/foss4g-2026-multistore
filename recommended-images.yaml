@@ -1,0 +1,83 @@
+images:
+  landsat8-ayon-island:
+    src: /images/landsat8-ayon-island.jpg
+    description: Landsat 8 image of Ayon Island
+    source:
+      page: "https://unsplash.com/photos/B-bXvd0R1bM"
+      image: "https://images.unsplash.com/photo-1722083855371-0d5a25647ce6"
+
+  landsat9-kangerdlugssuaq-greenland:
+    src: /images/landsat9-kangerdlugssuaq-greenland.jpg
+    description: Landsat 9 image of Kangerdlugssuaq Glacier, Greenland
+    source:
+      page: "https://unsplash.com/photos/PgL1p8TBGNQ"
+      image: "https://images.unsplash.com/photo-1722080768196-8983bbbb5c0f"
+
+  landsat8-klyuchevskaya-kamchatka:
+    src: /images/landsat8-klyuchevskaya-kamchatka.jpg
+    description: Landsat 8 image of Klyuchevskaya, Kamchatka Peninsula, Siberia, Russia
+    source:
+      page: "https://unsplash.com/photos/yMcULenXoik"
+      image: "https://images.unsplash.com/photo-1744968776900-311abae36ead"
+
+  blue-white-red-abstract-painting:
+    src: /images/blue-white-red-abstract-painting.jpg
+    description: |
+      Along the southeastern coast of Greenland, an intricate network of fjords funnels
+      glacial ice to the Atlantic Ocean. During the summer melting season, newly calved
+      icebergs join slabs of sea ice and older, weathered bergs in an offshore slurry
+      that the southward-flowing East Greenland Current sometimes swirls into stunning
+      shapes. Exposed rock of mountain peaks, tinted red in this image, hints at a
+      hidden landscape.
+    source:
+      page: "https://unsplash.com/photos/blue-white-and-red-abstract-painting-3O2HJPzgkQY"
+      image: "https://images.unsplash.com/photo-1579818276659-2943e3cd4b30"
+
+  satellite-image-body-of-water:
+    src: /images/satellite-image-body-of-water.jpg
+    description: Satellite image of a body of water
+    source:
+      page: "https://unsplash.com/photos/a-satellite-image-of-a-body-of-water-F8BGGoayfeQ"
+      image: "https://images.unsplash.com/photo-1722082839868-d900d1a07e69"
+
+  landsat9-taklimakan-desert-china:
+    src: /images/landsat9-taklimakan-desert-china.jpg
+    description: Landsat 9 image of Taklimakan Desert, China
+    source:
+      page: "https://unsplash.com/photos/KGzlTHjkyZM"
+      image: "https://images.unsplash.com/photo-1722080767795-af488166033d"
+
+  sentinel2a-southern-tibetan-plateau:
+    src: /images/sentinel2a-southern-tibetan-plateau.jpg
+    description: Sentinel-2A image of the Southern Tibetan Plateau
+    source:
+      page: null
+      image: "https://images.unsplash.com/photo-1744968777300-210d3bb46817"
+
+  landsat9-bangladesh-coast:
+    src: /images/landsat9-bangladesh-coast.jpg
+    description: Landsat 9 image of Bangladesh Coast
+    source:
+      page: "https://unsplash.com/photos/eGGENWtikd0"
+      image: "https://images.unsplash.com/photo-1722083854850-4a24185465ac"
+
+  landsat8-ord-river-australia:
+    src: /images/landsat8-ord-river-australia.jpg
+    description: Landsat 8 image of the Ord River in Australia
+    source:
+      page: "https://unsplash.com/photos/2BThgnOYoIc"
+      image: "https://images.unsplash.com/photo-1744968776986-3deb08e40a24"
+
+  landsat9-western-guinea-bissau:
+    src: /images/landsat9-western-guinea-bissau.jpg
+    description: Landsat 9 image of Western Guinea-Bissau
+    source:
+      page: "https://unsplash.com/photos/ZuN44o80Bn0"
+      image: "https://images.unsplash.com/photo-1722083854982-2f1516cf263c"
+
+  landsat9-apostle-islands-lake-superior:
+    src: /images/landsat9-apostle-islands-lake-superior.jpg
+    description: Landsat 9 image of Apostle Islands, Lake Superior
+    source:
+      page: "https://unsplash.com/photos/j7HqdQqn7Jo"
+      image: "https://images.unsplash.com/photo-1722080767251-aad7fa1796d3"
