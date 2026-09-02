@@ -24,13 +24,22 @@ image: /images/theme/lena-delta.jpg
 ---
 
 <!--
-日本語版。英語版は slides.md。
-構造・数値・コンポーネントは英語版と一致させること。翻訳は本文のみ。
+日本語版。英語版は slides.md。構造・数値・コンポーネントは英語版と一致させること。翻訳は本文のみ。
 -->
 
 # Multistore
 
 ## S3互換のデータ配信API
+
+<div mt-4 text-sm op-70 max-w-lg>
+
+⚠️ このスライドは英語版をAIで翻訳したものです。誤訳や不自然な表現が含まれる可能性があります。正確な内容は英語版をご確認ください。
+
+<div text-xs mt-1>
+AI-generated translation of the English original — it may contain errors.
+</div>
+
+</div>
 
 <DecorativeRectangle
   width="50%"
@@ -87,8 +96,7 @@ class: image-narrow
 
 <div mt-4 />
 
-> **高性能でS3互換のAPI**を、さまざまなランタイム上に構築するための
-> ツールキット。
+> **高性能でS3互換のAPI**を、さまざまなランタイム上に構築するためのツールキット。
 
 <div mt-4 />
 
@@ -181,8 +189,7 @@ class: px-5
 <div class="bg-black/85 rounded-lg py-10 px-10 text-white mt-6 text-3xl font-300 leading-snug">
 
 データ配信APIが必要なら、それはおそらく
-<span text-primary font-bold>オブジェクトストレージ上</span>にあるべきで、
-そしておそらく<span text-primary font-bold>S3 APIを実装</span>すべきです。
+<span text-primary font-bold>オブジェクトストレージ上</span>にあるべきで、そしておそらく<span text-primary font-bold>S3 APIを実装</span>すべきです。
 
 </div>
 
@@ -300,9 +307,7 @@ class: image-narrow
 
 ## すでにデータプロキシはあった
 
-Source は、どのクラウドにデータが置かれていても、すべてのデータセットに恒久的な
-アドレスを与える**S3互換API**を運用しています。ルーティング、認可、バックエンドの
-認証情報を担っていました。
+Source は、どのクラウドにデータが置かれていても、すべてのデータセットに恒久的なアドレスを与える**S3互換API**を運用しています。ルーティング、認可、バックエンドの認証情報を担っていました。
 
 <div mt-6 />
 
@@ -324,8 +329,7 @@ backgroundSize: contain
 
 <div text-lg>
 
-**2026年3月**: プラットフォームの利用が伸びるにつれ、**1日あたり 38 TB 超**の
-エグレスがロードバランサーを通過するようになりました。
+**2026年3月**: プラットフォームの利用が伸びるにつれ、**1日あたり 38 TB 超**のエグレスがロードバランサーを通過するようになりました。
 
 AWS のエグレス料金は **$0.09 / GB**。
 
@@ -406,8 +410,7 @@ scale: 0.5
 
 <div mt-3 />
 
-コンテナでも Lambda でもありません。コードは **V8 isolate** — Chrome と同じ
-エンジン — の中で動き、数千の isolate がひとつのプロセスを共有します。
+コンテナでも Lambda でもありません。コードは **V8 isolate** — Chrome と同じエンジン — の中で動き、数千の isolate がひとつのプロセスを共有します。
 
 <div mt-4 />
 
@@ -449,8 +452,7 @@ class: image-narrow
 
 <div mt-6 />
 
-> 「S3の前に置く小さなプロキシ」を書いたことがある人が、
-> もう書かなくて済むように。
+> 「S3の前に置く小さなプロキシ」を書いたことがある人が、もう書かなくて済むように。
 
 <LogoHorNegMono position="bottom-left" />
 
@@ -484,8 +486,7 @@ Workers で動くのは **JavaScript か WASM** だけです。
 
 <div mt-6 />
 
-JavaScript が本来の選択肢で、私たちにも経験があります。ただし長時間動き続ける
-プロキシとしての性能には不安がありました。
+JavaScript が本来の選択肢で、私たちにも経験があります。ただし長時間動き続けるプロキシとしての性能には不安がありました。
 
 </v-click>
 
@@ -528,8 +529,7 @@ JS の `ReadableStream` を Rust のバイトストリームに変換すると�
 
 ### ゼロコピー・パススルー
 
-オブジェクトの作成・読み取りでは、ゲートウェイが**署名付きURL**を発行します。
-ランタイムはリクエストを転送するだけ。レスポンスボディは JS の `ReadableStream`
+オブジェクトの作成・読み取りでは、ゲートウェイが**署名付きURL**を発行します。ランタイムはリクエストを転送するだけ。レスポンスボディは JS の `ReadableStream`
 のままプラットフォームへ返ります。
 
 Rust が読むのは**ヘッダーとメタデータ**だけです。
@@ -553,13 +553,11 @@ scale: 0.6
 
 <div mt-4 />
 
-S3の話し方は知っていますが、*あなたの*ルールは何も知りません — それは
-トレイトの実装として渡されます。
+S3の話し方は知っていますが、*あなたの*ルールは何も知りません — それはトレイトの実装として渡されます。
 
 <div mt-4 />
 
-**バックエンド**は `object_store` クレート経由です — S3・Azure Blob・GCS を
-ひとつのAPIで扱えるので、振る舞いを一度書けばどこでも動きます。
+**バックエンド**は `object_store` クレート経由です — S3・Azure Blob・GCS をひとつのAPIで扱えるので、振る舞いを一度書けばどこでも動きます。
 
 <LogoHorNegMono position="bottom-left" />
 
@@ -610,8 +608,7 @@ scale: 0.6
 
 <div mt-4 />
 
-> クライアントから見えるのは変わらずアクセスキーとシークレットです。
-> 違いは、それが失効することです。
+> クライアントから見えるのは変わらずアクセスキーとシークレットです。違いは、それが失効することです。
 
 <LogoHorNegMono position="bottom-left" />
 
@@ -636,8 +633,7 @@ class: image-narrow
 
 ### `multistore-path-mapping`
 
-キーとバックエンドの対応づけの制御。Source Cooperative には必要ですが、
-みなさんには任意です。
+キーとバックエンドの対応づけの制御。Source Cooperative には必要ですが、みなさんには任意です。
 
 <div mt-4 />
 
@@ -764,8 +760,7 @@ Source Cooperative のストレージ費用は、おおよそ:
 
 <div mt-6 />
 
-今はその両方を **AWS Open Data Sponsorship Program** が負担しています。
-前のスライドが成り立つのは、そのおかげです。
+今はその両方を **AWS Open Data Sponsorship Program** が負担しています。前のスライドが成り立つのは、そのおかげです。
 
 <div mt-4 />
 
