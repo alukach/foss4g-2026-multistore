@@ -4,9 +4,10 @@
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build slides.md --base ${BASE:-/} -o dist && slidev build slides.ja.md --base ${BASE:-/}ja/ -o dist/ja",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export slides.md && slidev export slides.ja.md",
+    "dev:ja": "slidev slides.ja.md --open --port 3031"
   },
   "dependencies": {
     "@slidev/cli": "^52.6.0",

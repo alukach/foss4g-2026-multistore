@@ -365,3 +365,10 @@ table tbody tr:nth-child(even) {
   background: none;
   padding: 0;
 }
+
+/* Japanese text: break at phrase boundaries rather than mid-word.
+   `auto-phrase` only affects CJK; Latin text is unchanged. */
+.slidev-layout {
+  line-break: strict;
+  word-break: auto-phrase;
+}

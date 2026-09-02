@@ -41,8 +41,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-slidev-
 
-      - name: Build
-        run: pnpm run build --base /${{github.event.repository.name}}/
+      - name: Build (English at /, Japanese at /ja/)
+        run: pnpm run build
+        env:
+          BASE: /${{github.event.repository.name}}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -131,7 +131,7 @@ Acknowledge: https://xkcd.com/927/
   :customStyle="{ mixBlendMode: 'multiply' }"
 >
   <div w-full h-full relative flex items-end justify-between gap-6 p-4 text-white text-right font-mono>
-    <LangQRCode :width="84" class="mb-1" />
+    <LangQRCode :width="100" class="mb-1" />
     <div flex flex-col items-end>
       <p text-4xl>
         FOSS4G 2026
