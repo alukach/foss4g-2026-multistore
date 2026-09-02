@@ -9,6 +9,8 @@ drawings:
   enable: false
 transition: slide-left
 mdc: true
+# hash routing: GitHub Pages cannot rewrite /ja/12 to the SPA entry
+routerMode: hash
 favicon: /meta/favicon.png
 addons:
     - slidev-addon-qrcode

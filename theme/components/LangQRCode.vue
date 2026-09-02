@@ -16,10 +16,14 @@ const isJa = /\/ja\/?$/.test(base)
 const label = isJa ? 'English' : '日本語'
 
 const url = computed(() => {
-  const origin = typeof window !== 'undefined' ? window.location.origin : ''
-  return isJa
-    ? `${origin}${base.replace(/ja\/?$/, '')}`
-    : `${origin}${base.replace(/\/?$/, '/')}ja/`
+  if (typeof window === 'undefined')
+    return ''
+  const { origin, hash } = window.location
+  const otherBase = isJa
+    ? base.replace(/ja\/?$/, '')
+    : `${base.replace(/\/?$/, '/')}ja/`
+  // hash routing (see routerMode in the deck headmatter): carry the slide over
+  return `${origin}${otherBase}${hash}`
 })
 </script>
 
