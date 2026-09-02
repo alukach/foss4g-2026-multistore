@@ -1,0 +1,43 @@
+
+Outline
+
+- Introduction
+  - Anthony Lukach
+  - Cloud Engineer @ Development Seed
+- Introduction to Source Cooperative
+  - Been working on Source Cooperative
+  - Project by Radiant Earth
+- Why Object Storage?
+- Status of Source Cooperative
+  - Current volumes
+  - Current product count
+- Where source Cooperative was when I started
+  - ECS Data Proxy
+  - Written in Rust
+- Overview of the data proxy
+  - Value of it
+  - API Gateway model
+- Why Rebuild?
+  - Need new runtime
+  - Need to escape egress
+  - Need to be able to support more backends
+  - Need more advanced features
+    - Egress limits
+- Talk about Cloudflare Workers
+  - Shared 
+- Enter: Multistore
+- Built by AI (😬)
+- High level summary of architecture
+  - Object Store
+  - Zero Copy data transfer
+    - Billing 
+- Goals of the project
+  - Rate Limiting
+  - Metered Access
+  - Billing
+  - Auth integration
+    - outgoing auth to backend systems
+    - incoming auth to proxy
+- Where to go from here?
+  - stand alone application?
+  - more use-cases

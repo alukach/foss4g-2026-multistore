@@ -163,8 +163,8 @@ li > ol {
 /* Blockquotes */
 blockquote {
   font-family: var(--slidev-font-family-heading);
-  font-weight: 300;
-  font-size: 1.25rem;
+  font-weight: 200;
+  font-size: 1.05rem;
   /* font-style: italic; */
   color: var(--slidev-theme-muted);
   border-left: 4px solid var(--slidev-theme-primary);
@@ -172,6 +172,7 @@ blockquote {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-left: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -317,4 +318,50 @@ table tr th:last-child {
 /* Alternate row colors for better readability (optional) */
 table tbody tr:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Footnotes: small, muted, pinned under the slide body */
+.slidev-layout .footnotes-sep {
+  margin-top: 1.5rem;
+  opacity: 0.3;
+}
+
+.slidev-layout .footnotes {
+  font-size: 0.65rem;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+.slidev-layout .footnotes ol {
+  padding-left: 1rem;
+}
+
+.slidev-layout .footnote-item p {
+  margin: 0.15rem 0;
+}
+
+.slidev-layout .footnote-ref {
+  font-size: 0.6em;
+  vertical-align: super;
+  text-decoration: none;
+}
+
+/* Wider iframe: content 1/3, iframe 2/3.
+   Add `class: iframe-wide` to an iframe-right slide's frontmatter. */
+.slidev-page .grid.grid-cols-2:has(.iframe-wide) {
+  grid-template-columns: 3fr 4fr !important;
+}
+
+/* Crate-name headings (`multistore-*`): mono, no chip, sized to stay on one line */
+.slidev-layout h1 code {
+  font-size: 0.45em;
+  background: none;
+  padding: 0;
+}
+
+/* Crate names in h3 headings keep their real (lowercase) casing */
+.slidev-layout h3 code {
+  text-transform: none;
+  background: none;
+  padding: 0;
 }

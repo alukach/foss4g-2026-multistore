@@ -35,7 +35,7 @@ const rightWidth = `${100 - props.leftRatio}%`;
 
 <style scoped>
 .two-cols {
-  padding: 1rem 2rem;
+  padding: 3rem;
 }
 
 .left-col,
