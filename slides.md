@@ -568,22 +568,14 @@ class: image-narrow
 
 Workers run **JavaScript or WASM** — and nothing else.
 
-<v-click>
-
 <div mt-6 />
 
 JavaScript is the native choice, and we have that experience. But we had concerns about its performance for a long-running proxy.
-
-</v-click>
-
-<v-click>
 
 <div mt-8 />
 
 > **Rust** was the sweet spot — in-house support, the performance we wanted,
 > mature WASM tooling, and the same core compiles for a **native server** and even **AWS Lambda**.
-
-</v-click>
 
 <LogoHorNegMono position="bottom-left" />
 

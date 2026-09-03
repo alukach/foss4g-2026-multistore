@@ -484,23 +484,15 @@ class: image-narrow
 
 Workers で動くのは **JavaScript か WASM** だけです。
 
-<v-click>
-
 <div mt-6 />
 
 JavaScript が本来の選択肢で、私たちにも経験があります。ただし長時間動き続けるプロキシとしての性能には不安がありました。
-
-</v-click>
-
-<v-click>
 
 <div mt-8 />
 
 > **Rust** がちょうどよい選択でした — 社内に知見があり、求める性能が出て、
 > WASM ツールチェーンも成熟しており、同じコアが**ネイティブサーバー**や
 > **AWS Lambda** 向けにもコンパイルできます。
-
-</v-click>
 
 <LogoHorNegMono position="bottom-left" />
 
